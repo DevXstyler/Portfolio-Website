@@ -56,10 +56,9 @@ section {
   padding: 20px;
   border: 2px solid rgb(0, 247, 255);
   border-radius: 10px; /* abgerundete Ecken */
-  width: 47%; /* feste Breite */
+  width: 90%; /* feste Breite */
   transition: all 0.2s ease-in-out; /* Added transition for smooth return */
 }
-
 section:hover {
   background: linear-gradient(135deg, rgba(0, 247, 255, 0.2), rgba(0, 140, 255, 0.2));
   box-shadow: 0 0 15px rgba(0, 247, 255, 0.171), 0 0 30px rgba(0, 140, 255, 0.171);
@@ -89,19 +88,21 @@ a {
   align-items: center;
   gap: 10px; /* Abstand zwischen Name, Bar und Prozent */
   font-family: monospace; /* damit die Balken gleichmäßig aussehen */
+  width: 50%;
 }
 
 .skill-name {
-  width: 70px; /* gleiche Breite für alle Namen */
+  width: 80px; /* gleiche Breite für alle Namen */
 }
 
 .skill-bar {
   flex: 1;
   background-color: #2c2c2c;
   height: 20px;
+
   position: relative;
   font-family: monospace;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .fill {
@@ -112,7 +113,7 @@ a {
 }
 
 .skill-percent {
-  width: 40px; /* fester Platz für Prozent */
+  width: 70px; /* fester Platz für Prozent */
   text-align: right;
 }
 #HeaderDevXstyler {
@@ -130,8 +131,30 @@ a {
     width: var(--fill-width);
   }
 }
+
 h2, h3 {
   text-shadow: 0 0 0px rgb(0, 247, 255),
                0 0 2px rgb(0, 247, 255),
                0 0 5px rgb(0, 247, 255);
+}
+#StatusAndIon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Abstand zwischen den Elementen */
+  margin-top: 10px; /* Abstand nach oben */
+}
+#IonLogo {
+  width: 30px; /* Größe des Logos */
+  height: 30px;
+  border-radius: 50%; /* rundes Bild */
+  border: 2px solid #00eeff; /* weißer Rand */
+}
+#StatusBubble {
+  width: 15px;
+  height: 15px;
+  background-color: #00ff00; /* grün für online */
+  border: 2px solid #ffffff; /* weißer Rand */
+  border-radius: 50%; /* rund */
+  display: inline-block;
 }
