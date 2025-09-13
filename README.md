@@ -7,7 +7,7 @@ This repo will host my portfolio site where I showcase projects, tell stuff abou
 ---
 
 ## 🚧 Current Status
-- ❗ **Not deployed yet** — site offline  
+- ❗ **Not deployed yet** site offline  
 - 🔨 Work in progress: layout, project pages, and responsive design
 
 ---
