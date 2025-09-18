@@ -62,6 +62,7 @@ section {
   border-radius: 10px; 
   width: 90%; 
   transition: all 0.3s ease-in-out; /* Added transition for smooth return */
+  
 }
 section:hover {
   background: linear-gradient(135deg, rgba(0, 247, 255, 0.2), rgba(0, 140, 255, 0.2));
@@ -147,4 +148,49 @@ h2, h3 {
   text-shadow: 0 0 0px rgb(0, 247, 255),
                0 0 2px rgb(0, 247, 255),
                0 0 5px rgb(0, 247, 255);
+}
+#images {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  border: 0px solid rgb(0, 247, 255);
+  border-radius: 10px; 
+  width: 90%; 
+  transition: all 0.3s ease-in-out; /* Added transition for smooth return */
+}
+#images:hover {
+  background: linear-gradient(135deg, rgba(0, 247, 255, 0), rgba(0, 140, 255, 0));
+  box-shadow: 0 0 15px rgba(0, 247, 255, 0), 0 0 30px rgba(0, 140, 255, 0);
+  transform: scale(1.00);
+  transition: all 0.3s ease-in-out;
+}
+
+
+.image-row {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.image-track {
+  display: inline-flex;
+  animation: scroll-left 60s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* nur die Hälfte, weil du doppelt hast */
+}
+
+.responsive-image {
+  max-width: 200px; /* statt % → fixe Breite macht’s stabiler */
+  height: auto;
+  margin: 10px;
+  border: 2px solid rgb(0, 247, 255);
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.responsive-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px rgb(0, 247, 255), 0 0 5px rgb(0, 140, 255);
 }

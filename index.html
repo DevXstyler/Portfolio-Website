@@ -11,7 +11,6 @@
   <!-- JavaScript -->
   <script src="script.js" defer></script>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="Assets/Favicon.png">
 </head>
 <body>
@@ -64,6 +63,39 @@
       I just love to see what other people think and do. I love to see people appreciating my work.
       THAT is what keeps me going. Feedback is the only thing I need, even if its negative.
     </p>
+    <br>
+    <h3>Fun Facts about me:</h3>
+    <!-- Bullet list of fun facts -->
+     
+    <ul>
+      <li>My favorite programming language is C++</li>
+      <li>Fav editor is definetly: VSCode</li>
+      <li>I have a YouTube Channel where I post tutorials and project showcases</li>
+      <li>I'm a BIG fan of technology</li>
+      <li>I am Christian</li>
+      <li>My favourite song is: <a href="https://music.youtube.com/watch?v=2nPKXIHEoVw&si=grkK-0Jv8zj_bo00" target="_blank">Mortals Funk Remix</a></li>
+    </ul>
+    <br>
+    <p>
+      <h3>The Leader</h3>
+      I know people like to be the leader of projects and other stuff, and to be honest, I like that too.
+      I just LOVE having the control over projets and things like that!
+      <br>
+      <br>
+      Failing leads me to do nothing else than trying
+      even harder.
+      <br>
+      <br>
+      And succeeding just makes me UNBELIEVABLY happy!
+      <br>
+      <br>
+      I know it's kinda weird but I love beeing the leader because I know I am the person
+      I can trust the most.
+
+    </p>
+
+
+
     <hr>
     <h3>Skill Overview</h3>
     <p>
@@ -111,8 +143,67 @@
 
     <section id="projects">
       <h2>My Projects</h2>
-      <p>The weird, horrible but also useful stuff I do</p>
-      <p>Including Sourcecode for some projects</p>
+      <p>The weird, horrible but also useful stuff I do. Including Sourcecode for some projects</p>
+      <p>
+        I create various projects, mostly in C++ and Python.
+        My main focus is on creating fun and interesting applications, including some malware for educational purposes.
+        I also work on game development projects using C++
+      </p>
+      <p>
+        Here are some projects I am working on:
+      <ul>
+        <li>
+          Rog&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- A Jokeware GDI virus that
+          <span id="glitchText"></span>
+        </li>
+        <li>DevQuest - A game like motivation booster with quests</li>
+        <li>Xeno Bot - A Bot for our <a href="https://discord.gg/75W6mXRh5f" target="_blank">Discord Server</a></li>
+      </ul>
+
+      <script>
+      const glitchy = ["Error 404","Ḧ̸̳̭̺͂̂̏̆͋̏̈̃̀͊̀̚͘̚","*'!\"$242","SUICIDE","FUN FUN FUN FUN","_:!§$%*"];
+      let i = 0;
+      setInterval(() => {
+        const el = document.getElementById("glitchText");
+        el.textContent = glitchy[i % glitchy.length];
+        el.style.color = `hsl(${Math.random()*360},100%,50%)`; // changes color FAST;
+        el.style.transform = `translate(${Math.random()*4-2}px, ${Math.random()*6-2}px)`;
+
+        i++;
+      }, 135);
+      </script>
+
+      <style>
+      #glitchText {
+        font-weight: bold;
+        display: inline-block;
+        animation: glitch 3s infinite;
+      }
+      @keyframes glitch {
+        0% {
+          text-shadow: 2px 0 red, -2px 0 cyan;
+        }
+        20% {
+          text-shadow: -2px 0 red, 2px 0 cyan;
+        }
+        40% {
+          text-shadow: 2px 0 red, -2px 0 cyan;
+        }
+        60% {
+          text-shadow: -2px 0 red, 2px 0 cyan;
+        }
+        80% {
+          text-shadow: 2px 0 red, -2px 0 cyan;
+        }
+        100% {
+          text-shadow: -5px 0 red, 5px 0 cyan;
+        }
+      }
+      </style>
+      </p>
+      <p>
+        You can find all my projects on the <a href="Projects/Projects.html">Projects Page</a>
+      </p>
       <a href="Projects/Projects.html">
         <button type="button">Take me there</button>
       </a>
@@ -131,8 +222,31 @@
     </p>
     </section>
 
-
-
+    <section id="images">
+      <h2>Images</h2>
+      <p>Here are some random images and screenshots I made</p>
+      <div class="image-row">
+        <div class="image-track">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <!-- DUPLIKAT direkt danach -->
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+          <img src="Assets/PlaceHolder.png" class="responsive-image">
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
