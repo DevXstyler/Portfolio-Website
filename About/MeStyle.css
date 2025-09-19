@@ -1,0 +1,193 @@
+@font-face {
+  font-family: 'Morex';
+  src: url('../Fonts/Morex.woff') format('woff'); /* korrektes Format */
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: Arial, "Courier New", sans-serif;
+  font-size: 18px; /* statt size */
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', monospace;
+  background-color: black;
+  color: #00f0f0;
+  background: linear-gradient(135deg, #050008, rgb(0, 0, 41));
+}
+
+#HeaderDevXstyler {
+  font-family: 'Morex', sans-serif;
+  font-size: 128px; /* nur einmal */
+  color: rgb(0, 247, 255);
+  text-align: center; /* wirkt schöner */
+  margin: 20px 0;
+}
+#navbar {
+  text-align: center; /* zentriert die Navigation */
+  margin-bottom: 20px; /* Abstand nach unten */
+  color: rgb(0, 247, 255);
+}
+#socialheader3 {
+  font-weight: bold;
+  font-size: 20px; /* nur einmal */
+  color: rgb(0, 247, 255);
+  text-align: center; /* wirkt schöner */
+  margin: 20px;
+  margin-bottom: -14px;
+}
+
+#HeaderDevXstyler {
+  text-shadow: 0 0 0px rgb(0, 247, 255),
+               0 0 10px rgb(0, 247, 255),
+               0 0 10px rgb(0, 247, 255);
+}
+hr {
+  border: 1px solid rgb(0, 247, 255);
+}
+
+/* colorful text for whole page */
+h1, h2, h3, h4, h5, h6, p, li , span {
+  color: rgb(0, 247, 255); /* Beispiel für rote Überschriften */
+}
+a {
+  text-decoration:none;
+  color: rgb(0, 247, 255);
+  font-weight: bold;
+}
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Abstand zwischen Name, Bar und Prozent */
+  font-family: monospace; /* damit die Balken gleichmäßig aussehen */
+  width: 50%;
+}
+
+.skill-name {
+  width: 80px; /* gleiche Breite für alle Namen */
+}
+
+.skill-bar {
+  flex: 1;
+  background-color: #2c2c2c;
+  height: 20px;
+
+  position: relative;
+  font-family: monospace;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.skill-bar:hover {
+  box-shadow: 0 0 1px rgb(0, 247, 255), 0 0 20px rgb(0, 140, 255);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  background-color: rgb(0, 247, 255);
+  border-radius: 3px 0 0 3px; /* abgerundete Ecken links */
+}
+
+.skill-percent {
+  width: 20px; /* fester Platz für Prozent */
+  text-align: right;
+}
+
+.fill {
+  width: 0; /* initial */
+  animation: fillAnimation 1s forwards;
+}
+/* Timeline Style */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 3px solid cyan;
+}
+
+.timeline details {
+  margin: 15px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.timeline summary {
+  font-weight: bold;
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.timeline summary::marker {
+  display: none; /* Pfeil verstecken */
+}
+
+.timeline summary::before {
+  content: "◆";
+  color: cyan;
+  position: absolute;
+  left: -25px;
+  top: 2px;
+}
+
+.timeline details[open] {
+  background: rgba(0, 247, 255, 0.08);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
+  transform: scale(1.01);
+}
+
+.timeline p {
+  margin: 8px 0 0 0;
+}
+button {
+  background-color: black;
+  color: rgb(0, 247, 255);
+  border: 2px solid rgb(0, 247, 255);
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+button:hover {
+  background-color: rgb(0, 247, 255);
+  color: black;
+  box-shadow: 0 0 10px rgb(0, 247, 255), 0 0 20px rgb(0, 140, 255);
+  transform: scale(1.05);
+  /* make smooth*/
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+
+}
+section {
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid rgb(0, 247, 255);
+  border-radius: 10px; 
+  width: 90%; 
+  transition: all 0.3s ease-in-out; /* Added transition for smooth return */
+  
+}
+section:hover {
+  background: linear-gradient(135deg, rgba(0, 247, 255, 0.2), rgba(0, 140, 255, 0.2));
+  box-shadow: 0 0 15px rgba(0, 247, 255, 0.171), 0 0 30px rgba(0, 140, 255, 0.171);
+  transform: scale(1.01);
+  transition: all 0.3s ease-in-out;
+}
+footer {
+  text-align: center;
+  margin: 20px 0;
+  color: rgb(0, 247, 255);
+}
+h2, h3 {
+  text-shadow: 0 0 0px rgb(0, 247, 255),
+               0 0 2px rgb(0, 247, 255),
+               0 0 5px rgb(0, 247, 255);
+}
+@keyframes fillAnimation {
+  to {
+    width: var(--fill-width);
+  }
+}

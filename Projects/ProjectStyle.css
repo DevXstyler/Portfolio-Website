@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Morex';
-  src: url('Fonts/Morex.woff') format('woff'); /* korrektes Format */
+  src: url('../Fonts/Morex.woff') format('woff'); /* korrektes Format */
   font-weight: normal;
   font-style: normal;
 }
@@ -46,6 +46,25 @@ button {
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
+/* disabled buttons:*/
+button:disabled {
+  background-color: rgb(62, 86, 97);
+  color: darkgrey;
+  border: 2px solid rgb(62, 86, 97);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+button:disabled:hover {
+  background-color: rgb(62, 86, 97);
+  color: darkgrey;
+  border: 2px solid rgb(62, 86, 97);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+
 button:hover {
   background-color: rgb(0, 247, 255);
   color: black;
