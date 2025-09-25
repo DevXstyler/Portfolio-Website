@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevXstyler - Main</title>
+  <title>DevXstyler - Projects</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="ProjectStyle.css">
 
   <!-- JavaScript -->
-  <script src="script.js" defer></script>
+  <script src="ProjectJS.js" defer></script>
 
   <link rel="icon" type="image/png" href="Assets/Favicon.png">
 </head>
@@ -43,17 +43,26 @@
       <a href="../index.html">
         <button><- Home</button>
       </a>
+      <br>
+      <!--Search for tags-->
+      <textarea id="tagsearch" placeholder="Search for tags (e.g. Virus, Unfinished, etc.)"></textarea>
+
+    
     </nav>
     <hr>
+    
     
   </header>
   <main>
     <section id="Rog">
+      <div class="section-header">
         <h2>Rog - The Jokeware Virus</h2>
-
-        <span class="tag">Virus</span>
-        <span class="tag">Unfinished</span>
-
+        <div class="tags">
+          <span class="tag-Virus">Virus</span>
+          <span class="tag-Unfinished">Unfinished</span>
+          <span class="tag-Experimental" id="glitchText">Experimental</span>
+        </div>
+      </div>
         <p>Rog is an in C++ made Jokeware that will ask you questions you will have to answer correctly.</p>
         <p>If you don't answer correctly you will be punished.</p>
         <p>Punishments Include:</p>
@@ -64,14 +73,87 @@
             <li>And more...</li>
         </ul>
 
+        <sub>Note: This is a jokeware, it will not harm your computer and is solely for learning purposes</sub>
+        <br>
+
         <button disabled>Download</button>
-        <a href="Projects/Rog.html" target="_blank" title="My Projects Page">
+        <a href="https://Nan" target="_blank" title="My Projects Page">
             <!--VIew on github = forbidden, button disabled-->
         <button id="ViewProject" disabled
         >View on Github</button>
         </a>
         
     </section>
+
+
+    <section id="DevQuest">
+      <div class="section-header">
+        <h2>DevQuest - Motivation Booster</h2>
+        <div class="tags">
+          <span class="tag-Unfinished">Unfinished</span>
+          <span class="tag-Software">Software</span>
+          <span class="tag-Game">Game</span>
+          <span class="tag-Utility">Utility</span>
+        </div>
+      </div>
+        <p>DevQuest is a C++ made application that helps you to stay motivated by giving you quests to complete.
+         I am planning to make this the first Online application that also works on linux.
+        </p>
+        <p>It is still in development and will be released as soon as possible.</p>
+        <button disabled>Download</button>
+
+        <a href="https://Nan" target="_blank" title="My Projects Page">
+        <button id="ViewProject" disabled>View on Github</button>
+        </a>
+    </section>
+
+
+    <section id="Xeno Bot">
+      <div class="section-header">
+        <h2>Xeno Bot - Discord Bot</h2>
+        <div class="tags">
+          <span class="tag-Unfinished">Unfinished</span>
+          <span class="tag-Utility">Utility</span>
+          <span class="tag-AI">AI</span>
+          <span class="tag-Other">Other</span>
+        </div>
+      </div>
+        <p>Xeno Bot is a Discord bot made with Python and the Discord.js library.
+        Xeno Bot includes Auto Moderation, custom commands like a chat-clear and WAY more!
+        It is still in development and will be released soon.</p>
+        <sub>It is planned to add AI (a ChatBot) as a feature, if it will be added is unclear.</sub>
+        <br>
+        <a href="https://Nan" target="_blank" title="My Projects Page">
+        <button id="ViewProject" disabled>View on Github</button>
+        </a>
+    </section>
+
+    <section id="Noty">
+      <div class="section-header">
+        <h2>Noty - Notepad Reimagined</h2>
+        <div class="tags">
+          <span class="tag-Unfinished">Unfinished</span>
+          <span class="tag-Software">Software</span>
+          <span class="tag-Utility">Utility</span>
+        </div>
+      </div>
+      <p>Noty is a new and better Editor than the classic Windows one. It is portable and I am planning to make it
+        working on Linux.
+        It features simple and fast editing with headers, Markdown features and color.
+      </p>
+      <sub>I am planning to add syntax for programming aswell but I am not sure if I will as my editor isn't supposed to be used for coding.</sub>
+      <br>
+
+      <button disabled>Download</button>
+      <a href="https://Nan" target="_blank" title="View Project on Github">
+        <button disabled>View on Github</button>
+      </a>
+    </section>
+
+      <h1 id="Soon">More Soon!</h1>
+      <br>
+      <br>
+
   </main>
   <footer>
     <hr>

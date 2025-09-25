@@ -5,14 +5,21 @@
   font-style: normal;
 }
 body {
-  font-family: Arial, "Courier New", sans-serif;
-  font-size: 18px; /* statt size */
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
   margin: 0;
   padding: 0;
-  font-family: 'Courier New', monospace;
-  background-color: black;
   color: #00f0f0;
-  background: linear-gradient(135deg, #050008, rgb(0, 0, 41));
+  background: linear-gradient(120deg, #050008, #00002a, #00001a, #050008);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  overflow-x: hidden;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 50%; }
 }
 
 #HeaderDevXstyler {
@@ -46,7 +53,7 @@ hr {
 }
 
 /* colorful text for whole page */
-h1, h2, h3, h4, h5, h6, p, li , span {
+h1, h2, h3, h4, h5, h6{
   color: rgb(0, 247, 255); /* Beispiel für rote Überschriften */
 }
 a {
@@ -142,9 +149,9 @@ a {
   margin: 8px 0 0 0;
 }
 button {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   color: rgb(0, 247, 255);
-  border: 2px solid rgb(0, 247, 255);
+  border: 1px solid rgba(0, 247, 255, 0.233);
   padding: 10px 20px;
   margin: 5px;
   cursor: pointer;
@@ -153,28 +160,53 @@ button {
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 button:hover {
-  background-color: rgb(0, 247, 255);
-  color: black;
-  box-shadow: 0 0 10px rgb(0, 247, 255), 0 0 20px rgb(0, 140, 255);
+  background: linear-gradient(135deg, rgba(0, 247, 255, 0.08), rgba(0, 140, 255, 0.384));
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 5px rgb(0, 247, 255), 0 0 5px rgb(0, 140, 255);
   transform: scale(1.05);
   /* make smooth*/
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
 
 }
 section {
-  margin: 20px auto;
-  padding: 20px;
-  border: 2px solid rgb(0, 247, 255);
-  border-radius: 10px; 
-  width: 90%; 
-  transition: all 0.3s ease-in-out; /* Added transition for smooth return */
-  
+  margin: 40px auto;
+  padding: 35px 40px;
+  border: 1px solid rgba(0, 247, 255, 0.35);
+  border-radius: 18px; 
+  width: 80%;
+  background: rgba(15, 15, 20, 0.6); /* dark glassy panel */
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45),
+              inset 0 0 20px rgba(0, 247, 255, 0.05);
+  transition: transform 0.3s ease, 
+              box-shadow 0.3s ease, 
+              border 0.3s ease, 
+              background 0.3s ease;
 }
+
 section:hover {
-  background: linear-gradient(135deg, rgba(0, 247, 255, 0.2), rgba(0, 140, 255, 0.2));
-  box-shadow: 0 0 15px rgba(0, 247, 255, 0.171), 0 0 30px rgba(0, 140, 255, 0.171);
-  transform: scale(1.01);
-  transition: all 0.3s ease-in-out;
+  background: linear-gradient(135deg, rgba(0, 247, 255, 0.08), rgba(0, 140, 255, 0.384));
+  border: 1px solid rgba(0, 247, 255, 0.7);
+  box-shadow: 0 12px 30px rgba(0, 247, 255, 0.25),
+              0 18px 40px rgba(0, 140, 255, 0.25),
+              inset 0 0 30px rgba(0, 247, 255, 0.08);
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Optional: give titles inside section a glow */
+section h2, section h3 {
+  color: #00f7ff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px rgba(0, 247, 255, 0.7);
+}
+
+/* Optional: style text inside */
+section p, li, ul, span, a {
+  color: #e0e0e0;
+  line-height: 1.6;
 }
 footer {
   text-align: center;
